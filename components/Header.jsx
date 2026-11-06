@@ -7,7 +7,8 @@ const LINKS = [
   ['About', '#about'],
   ['Services', '#services'],
   ['How we work', '#process'],
-  ['Gallery', '#gallery'],
+  ['Projects', '#projects'],
+  ['Crew', '#gallery'],
   ['Contact', '#contact'],
 ];
 
