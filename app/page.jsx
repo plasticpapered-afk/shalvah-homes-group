@@ -6,7 +6,17 @@ import ContactForm from '../components/ContactForm';
 import { ArrowIcon, WaIcon, MailIcon, PinIcon, IgIcon } from '../components/Icons';
 import { SITE, SERVICES, STEPS, WHY, waLink } from '../lib/site';
 
-const GALLERY = [
+const PROJECTS = [
+  { src: '/img/villa.jpg', alt: 'Modern villa with pool and covered dining terrace', tag: 'Architecture', w: 1600, h: 900, span: 'wide' },
+  { src: '/img/kitchen.jpg', alt: 'Marble island kitchen with brass pendant lights', tag: 'Kitchens', w: 965, h: 1280 },
+  { src: '/img/kitchen4.jpg', alt: 'Champagne kitchen with fluted panelling and brass fittings', tag: 'Kitchens', w: 1024, h: 1281 },
+  { src: '/img/kitchen2.jpg', alt: 'Grey gloss kitchen with lit display cabinets', tag: 'Kitchens', w: 965, h: 1280 },
+  { src: '/img/kitchen3.jpg', alt: 'Completed open plan kitchen with island', tag: 'Kitchens', w: 756, h: 1008 },
+  { src: '/img/wardrobe.jpg', alt: 'Fluted wardrobe and entry with arched lit mirror', tag: 'Wardrobes', w: 736, h: 920 },
+  { src: '/img/entry.jpg', alt: 'Blush wardrobe with lit mirror and console', tag: 'Wardrobes', w: 1080, h: 1349 },
+];
+
+const CREW = [
   { src: '/img/a-engineer.jpg', alt: 'Shalvah Homes Group engineer on site', tag: 'On site', w: 1580, h: 956, span: 'wide' },
   { src: '/img/b-vest-man.jpg', alt: 'Site supervisor in Shalvah hi-vis vest', tag: 'On site', w: 480, h: 585 },
   { src: '/img/b-kit.jpg', alt: 'Shalvah uniform polo, cap and helmet', tag: 'Uniforms', w: 680, h: 585, span: 'wide' },
@@ -14,9 +24,6 @@ const GALLERY = [
   { src: '/img/b-jacket.jpg', alt: 'Shalvah branded jacket', tag: 'Uniforms', w: 288, h: 290 },
   { src: '/img/b-vest-back.jpg', alt: 'Shalvah safety vest', tag: 'Safety', w: 220, h: 290 },
   { src: '/img/b-gloves.jpg', alt: 'Shalvah work gloves', tag: 'Safety', w: 274, h: 240 },
-  { src: '/img/a-toolbelt.jpg', alt: 'Shalvah tool pouch', tag: 'Field work', w: 230, h: 290 },
-  { src: '/img/a-boots.jpg', alt: 'Shalvah safety boots', tag: 'Safety', w: 284, h: 290 },
-  { src: '/img/a-backpack.jpg', alt: 'Shalvah backpack', tag: 'Field work', w: 190, h: 290 },
 ];
 
 const TICKER = ['Design', 'Build', 'Live Better', 'Interior Design', 'Construction Finishing', 'Renovations', 'Floor Plan Design'];
@@ -29,7 +36,7 @@ export default function Home() {
 
       {/* HERO */}
       <section className="hero" id="top">
-        <Image src="/img/a-engineer.jpg" alt="" fill priority sizes="100vw" className="hero-img" />
+        <Image src="/img/villa.jpg" alt="Modern villa with pool by Shalvah Homes Group" fill priority sizes="100vw" className="hero-img" />
         <div className="hero-shade" />
         <div className="wrap hero-inner">
           <p className="eyebrow rise" style={{ '--d': '0.1s' }}>Construction and interior design · Dar es Salaam</p>
@@ -81,8 +88,8 @@ export default function Home() {
             </div>
           </div>
           <figure className="photo-stack reveal">
-            <Image src="/img/b-vest-man.jpg" alt="Shalvah Homes Group site supervisor" width={480} height={585} sizes="(max-width: 900px) 90vw, 420px" className="ph ph-1" />
-            <Image src="/img/b-kit.jpg" alt="Shalvah uniform polo, cap and helmet" width={680} height={585} sizes="(max-width: 900px) 70vw, 340px" className="ph ph-2" />
+            <Image src="/img/kitchen.jpg" alt="Marble island kitchen" width={965} height={1280} sizes="(max-width: 900px) 90vw, 420px" className="ph ph-1" />
+            <Image src="/img/wardrobe.jpg" alt="Fluted wardrobe and entry" width={736} height={920} sizes="(max-width: 900px) 70vw, 340px" className="ph ph-2" />
             <span className="badge">Design. Build. Live Better.</span>
           </figure>
         </div>
@@ -133,7 +140,7 @@ export default function Home() {
 
       {/* FULL BLEED QUOTE */}
       <section className="bleed">
-        <Image src="/img/b-kit.jpg" alt="" fill sizes="100vw" className="bleed-img" />
+        <Image src="/img/kitchen2-wide.jpg" alt="" fill sizes="100vw" className="bleed-img" />
         <div className="bleed-shade" />
         <div className="wrap bleed-inner reveal">
           <p className="kicker">Why choose us</p>
@@ -149,15 +156,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* GALLERY */}
-      <section className="section" id="gallery">
+      {/* PROJECTS */}
+      <section className="section" id="projects">
         <div className="wrap">
           <div className="head reveal">
-            <p className="kicker">Gallery</p>
-            <h2>The crew, in the Shalvah kit.</h2>
-            <p className="body dim">Professional uniforms. Safety first. Quality work. Our identity.</p>
+            <p className="kicker">Projects</p>
+            <h2>Spaces we design, build and <em>transform.</em></h2>
+            <p className="body dim">Kitchens, wardrobes and whole homes, finished with attention to detail.</p>
           </div>
-          <Lightbox items={GALLERY} />
+          <Lightbox items={PROJECTS} />
+        </div>
+      </section>
+
+      {/* CREW */}
+      <section className="section dark-2" id="gallery">
+        <div className="wrap">
+          <div className="head reveal">
+            <p className="kicker">The crew</p>
+            <h2>Professional uniforms. <em>Safety first.</em></h2>
+            <p className="body dim">Quality work. Our identity.</p>
+          </div>
+          <Lightbox items={CREW} />
         </div>
       </section>
 
